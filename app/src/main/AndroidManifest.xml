@@ -5,10 +5,19 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-feature android:name="android.hardware.camera" />
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="permission" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission
         android:name="android.permission.WRITE_EXTERNAL_STORAGE"
         android:maxSdkVersion="18" />
+
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <category android:name="android.intent.category.BROWSABLE" />
+            <data android:scheme="https" />
+        </intent>
+    </queries>
 
     <application
         android:allowBackup="true"
@@ -19,8 +28,8 @@
         android:theme="@style/Theme.StoryApp">
 
         <activity
-            android:name=".ui.add.newpost.NewPostActivity"
-            android:exported="true" />
+            android:name=".ui.add.addStory.AddStoryActivity"
+            android:exported="false" />
         <activity
             android:name=".ui.detail.DetailActivity"
             android:exported="true" />
@@ -45,13 +54,5 @@
         </provider>
 
     </application>
-
-    <queries>
-        <intent>
-            <action android:name="android.intent.action.VIEW" />
-            <category android:name="android.intent.category.BROWSABLE" />
-            <data android:scheme="https" />
-        </intent>
-    </queries>
 
 </manifest>

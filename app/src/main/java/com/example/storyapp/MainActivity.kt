@@ -10,8 +10,8 @@ import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
 import com.example.storyapp.data.preferences.UserPreferences
 import com.example.storyapp.databinding.ActivityMainBinding
-import com.example.storyapp.ui.add.newpost.NewPostActivity
-import com.example.storyapp.ui.authentication.login.LoginFragment
+import com.example.storyapp.ui.add.addStory.AddStoryActivity
+import com.example.storyapp.authentication.login.LoginFragment
 import com.example.storyapp.ui.home.HomeFragment
 
 
@@ -58,7 +58,7 @@ class MainActivity : AppCompatActivity() {
                 true
             }
             R.id.add_story_menu -> {
-                val intent = Intent(this, NewPostActivity::class.java)
+                val intent = Intent(this, AddStoryActivity::class.java)
                 startActivity(intent)
                 FragmentManager.POP_BACK_STACK_INCLUSIVE
                 true

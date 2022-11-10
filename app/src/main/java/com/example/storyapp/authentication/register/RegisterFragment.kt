@@ -1,4 +1,4 @@
-package com.example.storyapp.ui.authentication.register
+package com.example.storyapp.authentication.register
 
 import android.os.Bundle
 import android.text.Editable
@@ -14,7 +14,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.storyapp.MainActivity
 import com.example.storyapp.R
 import com.example.storyapp.databinding.FragmentRegisterBinding
-import com.example.storyapp.ui.authentication.login.LoginFragment
+import com.example.storyapp.authentication.login.LoginFragment
 
 class RegisterFragment : Fragment() {
 
@@ -123,7 +123,7 @@ class RegisterFragment : Fragment() {
                     binding.registerBtn.textIsEnabled = getString(R.string.str_please_wait) + "..."
                 } else {
                     loadingDialog.dismiss()
-                    binding.registerBtn.textIsEnabled = getString(R.string.str_sign_up)
+                    binding.registerBtn.textIsEnabled = getString(R.string.str_register)
                 }
 
             }
@@ -150,7 +150,7 @@ class RegisterFragment : Fragment() {
             registerBtn.isEnabled =
                 edRegisterEmail.isValidate && edRegisterPassword.isValidate && !edRegisterName.text.isNullOrBlank()
             registerBtn.textIsEnabled =
-                if (registerBtn.isEnabled) getString(R.string.str_sign_up) else getString(R.string.str_complete_form)
+                if (registerBtn.isEnabled) getString(R.string.str_register) else getString(R.string.str_complete_form)
         }
     }
 

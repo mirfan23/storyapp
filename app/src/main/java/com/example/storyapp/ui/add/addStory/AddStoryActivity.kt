@@ -1,4 +1,4 @@
-package com.example.storyapp.ui.add.newpost
+package com.example.storyapp.ui.add.addStory
 
 import android.Manifest
 import android.animation.AnimatorSet
@@ -13,9 +13,11 @@ import android.view.View
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.core.content.FileProvider
 import com.bumptech.glide.Glide
+import com.example.storyapp.MainActivity
 import com.example.storyapp.Util
 import com.example.storyapp.Util.reduceFileImage
 import com.example.storyapp.data.model.remote.story.add.NewStoryResponse
@@ -33,7 +35,7 @@ import retrofit2.Response
 import java.io.File
 
 
-class NewPostActivity : AppCompatActivity() {
+class AddStoryActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityNewPostBinding
     private lateinit var currentPath: String
@@ -50,6 +52,14 @@ class NewPostActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityNewPostBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        if (!allPermissionGranted()) {
+            ActivityCompat.requestPermissions(
+                this,
+                REQUIRED_PERMISSIONS,
+                REQUEST_CODE_PERMISSIONS
+            )
+        }
 
         pref = UserPreferences(this)
         supportActionBar?.apply {
@@ -89,7 +99,7 @@ class NewPostActivity : AppCompatActivity() {
 
         Util.createTempFile(application).also {
             val photoUri: Uri = FileProvider.getUriForFile(
-                this@NewPostActivity,
+                this,
                 "com.example.storyapp",
                 it
             )
@@ -166,15 +176,16 @@ class NewPostActivity : AppCompatActivity() {
                     if (response.isSuccessful) {
                         val responseBody = response.body()
                         if (responseBody != null && !responseBody.error) {
-                            Toast.makeText(this@NewPostActivity, responseBody.message, Toast.LENGTH_LONG).show()
-                            onBackPressed()
+                            Toast.makeText(this@AddStoryActivity, responseBody.message, Toast.LENGTH_LONG).show()
+                            startActivity(Intent(this@AddStoryActivity, MainActivity::class.java))
+                            finishAffinity()
                         } else {
-                            Toast.makeText(this@NewPostActivity, response.message(), Toast.LENGTH_LONG).show()
+                            Toast.makeText(this@AddStoryActivity, response.message(), Toast.LENGTH_LONG).show()
                         }
                     }
                 }
                 override fun onFailure(call: Call<NewStoryResponse>, t: Throwable) {
-                    Toast.makeText(this@NewPostActivity, t.message.toString(), Toast.LENGTH_LONG).show()
+                    Toast.makeText(this@AddStoryActivity, t.message.toString(), Toast.LENGTH_LONG).show()
                 }
             })
         } else {
@@ -203,10 +214,5 @@ class NewPostActivity : AppCompatActivity() {
             )
             startDelay = 500
         }.start()
-    }
-
-    override fun onBackPressed() {
-        super.onBackPressed()
-        finish()
     }
 }

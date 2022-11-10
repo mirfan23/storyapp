@@ -18,26 +18,28 @@
 
         <ImageView
             android:id="@+id/image_item_list_story_iv"
-            android:layout_width="0dp"
-            android:layout_height="300dp"
+            android:layout_width="351dp"
+            android:layout_height="179dp"
+            android:layout_marginTop="16dp"
+            android:transitionName="photo"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.609"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:transitionName="photo"
             tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
         <TextView
             android:id="@+id/title_item_list_story_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             android:text="@string/title"
+            android:textColor="@color/black"
             android:textSize="24sp"
             android:textStyle="bold"
-            android:textColor="@color/black"
             android:transitionName="title"
-            app:layout_constraintStart_toStartOf="@+id/image_item_list_story_iv"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/image_item_list_story_iv" />
 
         <TextView

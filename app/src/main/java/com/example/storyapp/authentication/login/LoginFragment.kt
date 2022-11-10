@@ -1,4 +1,4 @@
-package com.example.storyapp.ui.authentication.login
+package com.example.storyapp.authentication.login
 
 import android.os.Bundle
 import android.text.Editable
@@ -15,7 +15,7 @@ import com.example.storyapp.R
 import com.example.storyapp.data.model.local.UserSession
 import com.example.storyapp.data.preferences.UserPreferences
 import com.example.storyapp.databinding.FragmentLoginBinding
-import com.example.storyapp.ui.authentication.register.RegisterFragment
+import com.example.storyapp.authentication.register.RegisterFragment
 import com.example.storyapp.ui.home.HomeFragment
 
 class LoginFragment : Fragment() {
@@ -130,7 +130,7 @@ class LoginFragment : Fragment() {
                     binding.loginBtn.textIsEnabled = getString(R.string.str_please_wait) + "..."
                 } else {
                     loadingDialog.dismiss()
-                    binding.loginBtn.textIsEnabled = getString(R.string.str_sign_in)
+                    binding.loginBtn.textIsEnabled = getString(R.string.str_login)
                 }
             }
             error.observe(viewLifecycleOwner) {
@@ -152,7 +152,7 @@ class LoginFragment : Fragment() {
     private fun setStoryAuthButtonEnable() {
         binding.apply {
             loginBtn.isEnabled = edLoginEmail.isValidate && edLoginPassword.isValidate
-            loginBtn.textIsEnabled = if (loginBtn.isEnabled) getString(R.string.str_sign_in) else getString(R.string.str_complete_form)
+            loginBtn.textIsEnabled = if (loginBtn.isEnabled) getString(R.string.str_login) else getString(R.string.str_complete_form)
         }
     }
 
