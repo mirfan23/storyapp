@@ -3,9 +3,9 @@ package com.example.storyapp.ui.home
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.storyapp.data.model.remote.story.list.ListStoryItem
-import com.example.storyapp.data.model.remote.story.list.ListStoryResponse
-import com.example.storyapp.data.network.ApiConfig
+import com.example.storyapp.data.model.response.ListStoryItem
+import com.example.storyapp.data.model.response.ListStoryResponse
+import com.example.storyapp.data.api.ApiConfig
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

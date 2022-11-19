@@ -20,10 +20,10 @@ import com.bumptech.glide.Glide
 import com.example.storyapp.MainActivity
 import com.example.storyapp.Util
 import com.example.storyapp.Util.reduceFileImage
-import com.example.storyapp.data.model.remote.story.add.NewStoryResponse
-import com.example.storyapp.data.network.ApiConfig
+import com.example.storyapp.data.model.response.NewStoryResponse
+import com.example.storyapp.data.api.ApiConfig
 import com.example.storyapp.data.preferences.UserPreferences
-import com.example.storyapp.databinding.ActivityNewPostBinding
+import com.example.storyapp.databinding.ActivityAddNewStoryBinding
 import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.MultipartBody
@@ -37,7 +37,7 @@ import java.io.File
 
 class AddStoryActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityNewPostBinding
+    private lateinit var binding: ActivityAddNewStoryBinding
     private lateinit var currentPath: String
     private lateinit var pref: UserPreferences
 
@@ -50,7 +50,7 @@ class AddStoryActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityNewPostBinding.inflate(layoutInflater)
+        binding = ActivityAddNewStoryBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         if (!allPermissionGranted()) {

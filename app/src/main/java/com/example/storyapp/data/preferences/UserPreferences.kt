@@ -1,7 +1,7 @@
 package com.example.storyapp.data.preferences
 
 import android.content.Context
-import com.example.storyapp.data.model.local.UserSession
+import com.example.storyapp.data.model.local.UserData
 
 class UserPreferences(context: Context) {
     companion object {
@@ -16,18 +16,18 @@ class UserPreferences(context: Context) {
     private val pref = context.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE)
     private val editor = pref.edit()
 
-    fun setUser(session: UserSession) {
+    fun setUser(data: UserData) {
         editor.apply {
-            putString(KEY_USER_ID, session.userId)
-            putString(KEY_NAME, session.name)
-            putString(KEY_TOKEN, session.token)
-            putBoolean(KEY_LOG_STATUS, session.isLogin)
+            putString(KEY_USER_ID, data.userId)
+            putString(KEY_NAME, data.name)
+            putString(KEY_TOKEN, data.token)
+            putBoolean(KEY_LOG_STATUS, data.isLogin)
             apply()
         }
     }
 
-    fun getUser(): UserSession =
-        UserSession(
+    fun getUser(): UserData =
+        UserData(
             pref.getString(KEY_USER_ID, "").toString(),
             pref.getString(KEY_NAME, "").toString(),
             pref.getString(KEY_TOKEN, "").toString(),

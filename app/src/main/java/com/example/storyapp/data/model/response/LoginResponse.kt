@@ -1,4 +1,4 @@
-package com.example.storyapp.data.model.remote.auth
+package com.example.storyapp.data.model.response
 
 import com.google.gson.annotations.SerializedName
 

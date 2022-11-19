@@ -11,7 +11,7 @@ import androidx.fragment.app.FragmentTransaction
 import com.example.storyapp.data.preferences.UserPreferences
 import com.example.storyapp.databinding.ActivityMainBinding
 import com.example.storyapp.ui.add.addStory.AddStoryActivity
-import com.example.storyapp.authentication.login.LoginFragment
+import com.example.storyapp.auth.login.LoginFragment
 import com.example.storyapp.ui.home.HomeFragment
 
 

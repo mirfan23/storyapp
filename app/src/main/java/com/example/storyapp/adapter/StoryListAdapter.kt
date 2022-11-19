@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import androidx.core.util.Pair
 import androidx.recyclerview.widget.DiffUtil
-import com.example.storyapp.data.model.remote.story.list.ListStoryItem
+import com.example.storyapp.data.model.response.ListStoryItem
 import com.example.storyapp.databinding.ItemListStoryBinding
 import com.example.storyapp.ui.detail.DetailActivity
 

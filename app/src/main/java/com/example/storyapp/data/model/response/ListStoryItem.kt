@@ -1,4 +1,4 @@
-package com.example.storyapp.data.model.remote.story.list
+package com.example.storyapp.data.model.response
 
 import android.os.Parcelable
 import com.google.gson.annotations.SerializedName

@@ -1,4 +1,4 @@
-package com.example.storyapp.authentication.register
+package com.example.storyapp.auth.register
 
 import android.os.Bundle
 import android.text.Editable
@@ -14,7 +14,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.storyapp.MainActivity
 import com.example.storyapp.R
 import com.example.storyapp.databinding.FragmentRegisterBinding
-import com.example.storyapp.authentication.login.LoginFragment
+import com.example.storyapp.auth.login.LoginFragment
 
 class RegisterFragment : Fragment() {
 
@@ -31,7 +31,7 @@ class RegisterFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        // Inflate the layout for this fragment
+
         _binding = FragmentRegisterBinding.inflate(layoutInflater, container, false)
         initViewModel()
         initView()

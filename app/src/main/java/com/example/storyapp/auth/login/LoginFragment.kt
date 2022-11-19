@@ -1,4 +1,4 @@
-package com.example.storyapp.authentication.login
+package com.example.storyapp.auth.login
 
 import android.os.Bundle
 import android.text.Editable
@@ -12,10 +12,10 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.storyapp.MainActivity
 import com.example.storyapp.R
-import com.example.storyapp.data.model.local.UserSession
+import com.example.storyapp.data.model.local.UserData
 import com.example.storyapp.data.preferences.UserPreferences
 import com.example.storyapp.databinding.FragmentLoginBinding
-import com.example.storyapp.authentication.register.RegisterFragment
+import com.example.storyapp.auth.register.RegisterFragment
 import com.example.storyapp.ui.home.HomeFragment
 
 class LoginFragment : Fragment() {
@@ -95,7 +95,7 @@ class LoginFragment : Fragment() {
             login(email, password)
             user.observe(viewLifecycleOwner) {
                 if (it != null) {
-                    val currentUser = UserSession(
+                    val currentUser = UserData(
                         it.name,
                         it.userId,
                         it.token,

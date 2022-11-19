@@ -1,7 +1,7 @@
 package com.example.storyapp.adapter
 
 import androidx.recyclerview.widget.DiffUtil
-import com.example.storyapp.data.model.remote.story.list.ListStoryItem
+import com.example.storyapp.data.model.response.ListStoryItem
 
 class StoryDiffCallback(
     private val oldListStories: ArrayList<ListStoryItem>,

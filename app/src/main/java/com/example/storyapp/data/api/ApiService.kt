@@ -1,9 +1,9 @@
-package com.example.storyapp.data.network
+package com.example.storyapp.data.api
 
-import com.example.storyapp.data.model.remote.auth.LoginResponse
-import com.example.storyapp.data.model.remote.auth.RegisterResponse
-import com.example.storyapp.data.model.remote.story.add.NewStoryResponse
-import com.example.storyapp.data.model.remote.story.list.ListStoryResponse
+import com.example.storyapp.data.model.response.LoginResponse
+import com.example.storyapp.data.model.response.RegisterResponse
+import com.example.storyapp.data.model.response.NewStoryResponse
+import com.example.storyapp.data.model.response.ListStoryResponse
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
 import retrofit2.Call

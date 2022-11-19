@@ -1,4 +1,4 @@
-package com.example.storyapp.data.network
+package com.example.storyapp.data.api
 
 import com.example.storyapp.BuildConfig
 import okhttp3.OkHttpClient
@@ -14,7 +14,6 @@ class ApiConfig {
             } else {
                 HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.NONE)
             }
-
             val client = OkHttpClient.Builder()
                 .addInterceptor(loggingInterceptor)
                 .build()

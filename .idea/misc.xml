@@ -28,10 +28,11 @@
         <entry key="..\:/Dicoding/StoryApp/app/src/main/res/drawable/ic_baseline_lock_focused_24.xml" value="0.182" />
         <entry key="..\:/Dicoding/StoryApp/app/src/main/res/drawable/ic_baseline_photo_album_24.xml" value="0.182" />
         <entry key="..\:/Dicoding/StoryApp/app/src/main/res/drawable/ic_baseline_post_add_24.xml" value="0.182" />
+        <entry key="..\:/Dicoding/StoryApp/app/src/main/res/layout/activity_add_new_story.xml" value="0.33" />
         <entry key="..\:/Dicoding/StoryApp/app/src/main/res/layout/activity_add_story.xml" value="0.17074275362318841" />
         <entry key="..\:/Dicoding/StoryApp/app/src/main/res/layout/activity_camera.xml" value="0.35052083333333334" />
         <entry key="..\:/Dicoding/StoryApp/app/src/main/res/layout/activity_check_user_login.xml" value="0.35052083333333334" />
-        <entry key="..\:/Dicoding/StoryApp/app/src/main/res/layout/activity_detail.xml" value="0.35052083333333334" />
+        <entry key="..\:/Dicoding/StoryApp/app/src/main/res/layout/activity_detail.xml" value="0.33" />
         <entry key="..\:/Dicoding/StoryApp/app/src/main/res/layout/activity_login.xml" value="0.33" />
         <entry key="..\:/Dicoding/StoryApp/app/src/main/res/layout/activity_main.xml" value="0.17074275362318841" />
         <entry key="..\:/Dicoding/StoryApp/app/src/main/res/layout/activity_new_post.xml" value="0.17046605876393112" />
